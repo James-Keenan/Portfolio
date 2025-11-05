@@ -1,0 +1,120 @@
+.welcomeScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--accent-color) 0%,
+    var(--accent-hover) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  cursor: pointer;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.welcomeScreen.fadeOut {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.content {
+  text-align: center;
+  color: white;
+  padding: var(--spacing-xl);
+  max-width: 600px;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: var(--font-5xl);
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: var(--font-xl);
+  margin-bottom: var(--spacing-2xl);
+  opacity: 0.9;
+}
+
+.loader {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: var(--spacing-xl);
+}
+
+.loaderBar {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+  animation: loading 3s ease-out forwards;
+  transform-origin: left;
+}
+
+@keyframes loading {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-4xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: var(--font-3xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-base);
+  }
+}

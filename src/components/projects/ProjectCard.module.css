@@ -1,0 +1,240 @@
+.projectCard {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  z-index: 0;
+  border-radius: var(--radius-xl);
+}
+
+.projectCard:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 50px var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+.projectCard:hover::before {
+  opacity: 0.05;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  padding: var(--spacing-lg);
+}
+
+.projectCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  display: flex;
+  gap: var(--spacing-md);
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.projectCard:hover .overlayContent {
+  transform: translateY(0);
+}
+
+.overlayButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-color);
+  border-radius: var(--radius-full);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.overlayButton:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+}
+
+.placeholderIcon {
+  font-size: 5rem;
+  opacity: 0.8;
+}
+
+.cardContent {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projectTitle {
+  font-size: var(--font-xl);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.projectDescription {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.techTag {
+  font-size: var(--font-xs);
+  padding: 0.25rem 0.75rem;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent-color);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.techTag:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.cardActions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
+
+.actionButton {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+}
+
+.actionButton:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.primaryButton {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.primaryButton:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: white;
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .imageContainer {
+    height: 180px;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .actionButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    height: 160px;
+  }
+
+  .cardContent {
+    padding: var(--spacing-md);
+  }
+
+  .placeholderIcon {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,266 @@
+.resume {
+  width: 100%;
+}
+
+.resumeHero {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: var(--font-4xl);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: var(--spacing-sm);
+}
+
+.pageSubtitle {
+  font-size: var(--font-xl);
+  color: #94a3b8;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Section Styles */
+.sectionTitle {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+/* Summary Section */
+.summarySection {
+  background-color: var(--bg-color);
+  padding: var(--spacing-lg) 0;
+}
+
+.summary {
+  font-size: var(--font-base);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Education Section */
+.educationSection {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg) 0;
+}
+
+.educationItem {
+  background: var(--bg-color);
+  border-left: 4px solid var(--accent-color);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.educationItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px var(--shadow-hover);
+}
+
+.educationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.degree {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.school {
+  font-size: var(--font-base);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.date {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.educationDescription {
+  font-size: var(--font-sm);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Skills Section */
+.skillsSection {
+  background-color: var(--bg-color);
+  padding: var(--spacing-lg) 0;
+}
+
+.skillsGrid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.skillCategory {
+  background: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.skillCategoryTitle {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.skillTag {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--accent-light);
+  color: var(--accent-color);
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  border: 1px solid var(--accent-color);
+  transition: all var(--transition-fast);
+}
+
+.skillTag:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Experience Section */
+.experienceSection {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg) 0;
+}
+
+.experienceItem {
+  background: var(--bg-color);
+  border-left: 4px solid var(--accent-color);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.experienceItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px var(--shadow-hover);
+}
+
+.experienceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.jobTitle {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.company {
+  font-size: var(--font-sm);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.responsibilities {
+  list-style: none;
+  padding-left: 0;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.responsibilities li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: var(--font-base);
+}
+
+.experienceNote {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent-color);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.experienceNote p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.experienceNote strong {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experienceHeader,
+  .educationHeader {
+    flex-direction: column;
+  }
+
+  .date {
+    align-self: flex-start;
+  }
+
+  .pageTitle {
+    font-size: var(--font-3xl);
+  }
+
+  .pageSubtitle {
+    font-size: var(--font-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: var(--font-2xl);
+  }
+}

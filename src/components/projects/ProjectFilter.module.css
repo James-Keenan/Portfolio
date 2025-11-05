@@ -1,0 +1,67 @@
+.filterContainer {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+}
+
+.filterButtons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.filterButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.filterButton:hover {
+  color: var(--accent-color);
+  background-color: var(--bg-color);
+}
+
+.filterButton.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.filterButton.active:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filterButtons {
+    width: 100%;
+  }
+
+  .filterButton {
+    flex: 1;
+    min-width: 100px;
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .filterButtons {
+    flex-direction: column;
+  }
+
+  .filterButton {
+    width: 100%;
+  }
+}
