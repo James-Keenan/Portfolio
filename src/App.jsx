@@ -15,7 +15,7 @@ import styles from "./App.module.css";
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/Portfolio-Website">
         <div className={styles.app}>
           <Navbar />
           <main className={styles.main}>
