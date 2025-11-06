@@ -13,7 +13,7 @@ const Projects = () => {
       title: "Bomb-Drop Game",
       description:
         "A fun and interactive game where players avoid bombs to survive and achieve a high score. Built with Phaser.js game framework.",
-      image: "/assets/images/Bomb-drop.png",
+      image: `${process.env.PUBLIC_URL}/assets/images/Bomb-drop.png`,
       tech: [
         "Phaser.js",
         "JavaScript",
@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Space Travel Web Application",
       description:
         "A multi-page React app simulating interplanetary evacuation logistics. Features spacecraft management, planet dispatching, and route handling with form validation and error handling.",
-      image: "/assets/images/spaceTravel.png",
+      image: `${process.env.PUBLIC_URL}/assets/images/SpaceTravel.png`,
       tech: [
         "React",
         "JavaScript",

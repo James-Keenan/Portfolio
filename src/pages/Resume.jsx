@@ -12,7 +12,7 @@ const Resume = () => {
             My professional journey and qualifications
           </p>
           <a
-            href="/assets/images/Resume.pdf"
+            href={`${process.env.PUBLIC_URL}/assets/images/Resume.pdf`}
             download
             className="btn-primary"
             aria-label="Download Resume PDF"

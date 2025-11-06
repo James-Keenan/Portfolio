@@ -49,9 +49,9 @@ const About = () => {
 
             <div className={styles.imageSection}>
               <div className={styles.imageContainer}>
-                <img 
-                  src={`${process.env.PUBLIC_URL}/assets/images/Profile Picture.jpg`}
-                  alt="James Keenan" 
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/images/profile-picture.jpg`}
+                  alt="James Keenan"
                   className={styles.profileImage}
                 />
               </div>
